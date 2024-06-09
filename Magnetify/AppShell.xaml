@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Magnetify.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Magnetify"
+    xmlns:views="clr-namespace:Magnetify.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Magnetify">
+
+    <TabBar>
+        <!-- Tab for the HomePage -->
+        <Tab Title="Home" Icon="icon_home.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+
+        <!-- Tab for the AboutPage -->
+        <Tab Title="About" Icon="icon_about.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>
