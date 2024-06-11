@@ -14,12 +14,6 @@
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
 
-        <!-- Tab for the LogPage -->
-        <!-- TODO: Add specific Log Icon -->
-        <Tab Title="About" Icon="icon_about.png" >
-            <ShellContent ContentTemplate="{DataTemplate views:LogPage}" />
-        </Tab>
-
         <!-- Tab for the AboutPage -->
         <Tab Title="About" Icon="icon_about.png" >
             <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />

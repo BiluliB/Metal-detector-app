@@ -63,6 +63,22 @@ namespace Magnetify.ViewModels
         [DependsOn(nameof(CurrentValue))]
         public Color BarColor => GetColorFromGradient(CurrentValue);
 
+        /// <summary>
+        /// The source for the icon image
+        /// Should by a visual indicator of the state of the magnetometer output
+        /// </summary>
+        public string IconSource { get; set; } = "icon_active.png";
+
+        /// <summary>
+        /// Force disable flag, to disable the magnetometer service
+        /// </summary>
+        [OnChangedMethod(nameof(OnForceDisableChange))]
+        public bool ForceDisable { get; set; } = false;
+
+        /// <summary>
+        /// Command to toggle the force disable flag
+        /// </summary>
+        public Command ToggleForceDisable => new Command(() => ForceDisable = !ForceDisable);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HomeViewModel"/> class.
@@ -79,6 +95,24 @@ namespace Magnetify.ViewModels
             _magnetometerService.PropertyChanged += OnMagnetometerServicePropertyChanged;
             _soundService.PropertyChanged += OnSoundServicePropertyChanged;
             Debug.WriteLine("Home view model created");
+        }
+
+        /// <summary>
+        /// Handler for the force disable flag change.
+        /// Applies the change to the icon source and checks and acts if the flag is disabled, stopping the sound and vibration if enabled.
+        /// </summary>
+        private void OnForceDisableChange()
+        {
+            if (ForceDisable)
+            {
+                Stop();
+                IconSource = "icon_inactive.png";
+            }
+            else
+            {
+                IconSource = "icon_active.png";
+                CheckAndAct();
+            }
         }
 
         /// <summary>
@@ -132,10 +166,9 @@ namespace Magnetify.ViewModels
                 Debug.WriteLine("Playing sound and vibrating");
                 await PlayAndVibrateAsync(_cts.Token);
             }
-            else if (_magnetometerService.CurrentAverage <= _magnetometerService.DetectionThreshold)
+            else if (_magnetometerService.CurrentAverage <= _magnetometerService.DetectionThreshold && IsPlaying)
             {
-                IsPlaying = false;
-                _cts?.Cancel();
+                Stop();
             }
         }
 
@@ -145,8 +178,8 @@ namespace Magnetify.ViewModels
         public void Stop()
         {
             IsPlaying = false;
-            _cts?.Cancel();
             Debug.WriteLine("Stopping sound and vibration");
+            _cts?.Cancel();
         }
 
         /// <summary>
@@ -158,9 +191,11 @@ namespace Magnetify.ViewModels
         /// <returns></returns>
         private async Task PlayAndVibrateAsync(CancellationToken cancellation)
         {
-            while (IsPlaying && !cancellation.IsCancellationRequested)
+            if (ForceDisable) return;
+
+            while (IsPlaying && App.IsHome && !cancellation.IsCancellationRequested)
             {
-                var duration = Math.Max(50, 800 - (int)(Math.Pow(_magnetometerService.NormalizedValue, 2) * 550));
+                var duration = Math.Max(50, 600 - (int)(Math.Pow(_magnetometerService.NormalizedValue, 2) * 450));
                 // SPAM
                 //Debug.WriteLine($"Normalized: {_magnetometerService.NormalizedValue}\nAverage: {_magnetometerService.CurrentAverage}\nPlaying beep for {duration} ms");
                 _soundService.BeepPlayer.Seek(0);

@@ -21,6 +21,7 @@ public partial class HomePage : ContentPage
     {
         base.OnAppearing();
         Debug.WriteLine("Home page appearing, checking and acting!");
+        App.IsHome = true;
         _viewModel.CheckAndAct();
     }
 
@@ -31,6 +32,7 @@ public partial class HomePage : ContentPage
     {
         base.OnDisappearing();
         Debug.WriteLine("Home page disappearing, running Stop");
+        App.IsHome = false;
         _viewModel.Stop();
     }
 }

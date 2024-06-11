@@ -76,7 +76,7 @@ namespace Magnetify
                         vibrationService?.Disable();
                     });
                 });
-                
+
 #endif
 
 #if IOS
@@ -84,22 +84,32 @@ namespace Magnetify
                 {
                     ios.FinishedLaunching((app, options) => {
                         Debug.WriteLine("Lifecycle: FinishedLaunching ------");
-                        var service = builder.Services.BuildServiceProvider().GetService<IMagnetometerService>();
-                        service?.InitializeAsync().Wait();
-                        service?.Start();
+                        var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
+                        var soundService = App.ServiceProvider.GetService<ISoundService>();
+                        var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
+                        magnetometerService?.InitializeAsync().Wait();
+                        soundService?.InitializeAsync().Wait();
                         return true;
                     });
 
                     ios.WillEnterForeground(app => {
                         Debug.WriteLine("Lifecycle: WillEnterForeground ------");
-                        var service = builder.Services.BuildServiceProvider().GetService<IMagnetometerService>();
-                        service?.Start();
+                        var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
+                        var soundService = App.ServiceProvider.GetService<ISoundService>();
+                        var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
+                        magnetometerService?.Start();
+                        soundService?.Enable();
+                        vibrationService?.Enable();
                     });
 
                     ios.DidEnterBackground(app => {
                         Debug.WriteLine("Lifecycle: DidEnterBackground ------");
-                        var service = builder.Services.BuildServiceProvider().GetService<IMagnetometerService>();
-                        service?.Stop();
+                        var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
+                        var soundService = App.ServiceProvider.GetService<ISoundService>();
+                        var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
+                        magnetometerService?.Stop();
+                        soundService?.Disable();
+                        vibrationService?.Disable();
                     });
                 });
 #endif

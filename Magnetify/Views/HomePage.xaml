@@ -4,12 +4,14 @@
              x:Class="Magnetify.Views.HomePage">
 
     <Grid RowDefinitions="Auto, *, Auto, Auto, *" ColumnDefinitions="*">
-        <!-- Logo -->
-        <Image 
-            Source="logo.png"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Grid.Row="1" />
+        <!-- Logo (with Active indicator) -->
+        <ImageButton
+             Source="{Binding IconSource}"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             Grid.Row="1"
+             Command="{Binding ToggleForceDisable}">
+        </ImageButton>
 
         <!-- ProgressBar Frame -->
         <Frame BackgroundColor="Transparent"
