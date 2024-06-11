@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:Magnetify.Common"
              x:Class="Magnetify.Views.HomePage">
 
-    <Grid RowDefinitions="Auto, *, Auto, Auto, *" ColumnDefinitions="*">
+    <Grid RowDefinitions=".3*, *, *, Auto, Auto, *" ColumnDefinitions="*">
         <!-- Logo (with Active indicator) -->
         <ImageButton
              Source="{Binding IconSource}"
@@ -46,5 +47,14 @@
            VerticalOptions="Center"
            HorizontalOptions="Center"
            Grid.Row="4" />
+
+        <!-- Short history of Values -->
+        <CollectionView Grid.Row="5" ItemsSource="{Binding ShortHistory}" VerticalOptions="Start" HorizontalOptions="Center" Opacity="0.7">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Text}" FontSize="Small" HorizontalOptions="Center" Opacity="{Binding Opacity}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>

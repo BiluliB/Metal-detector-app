@@ -27,6 +27,9 @@ namespace Magnetify
             builder.Services.AddSingleton<AboutPage>();
             builder.Services.AddSingleton<AboutViewModel>();
 
+            builder.Services.AddSingleton<RecentPage>();
+            builder.Services.AddSingleton<RecentViewModel>();
+
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>

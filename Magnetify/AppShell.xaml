@@ -10,12 +10,18 @@
 
     <TabBar>
         <!-- Tab for the HomePage -->
-        <Tab Title="Home" Icon="icon_home.png" >
+        <Tab Title="Home" Icon="icon_home.svg" >
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
 
+
+        <!-- Tab for the RecentPage -->
+        <Tab Title="Recent" Icon="icon_history.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:RecentPage}" />
+        </Tab>
+
         <!-- Tab for the AboutPage -->
-        <Tab Title="About" Icon="icon_about.png" >
+        <Tab Title="About" Icon="icon_about.svg" >
             <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
         </Tab>
     </TabBar>

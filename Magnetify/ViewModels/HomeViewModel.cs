@@ -1,7 +1,10 @@
 ﻿using Magnetify.Common;
+using Magnetify.Data;
 using Magnetify.Interfaces;
 using Magnetify.Services;
 using PropertyChanged;
+using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 
@@ -80,6 +83,10 @@ namespace Magnetify.ViewModels
         /// </summary>
         public Command ToggleForceDisable => new Command(() => ForceDisable = !ForceDisable);
 
+        public int _historyDebounceCount = 0;
+
+        public ObservableCollection<HistoryItem> ShortHistory { get; set; } = new ObservableCollection<HistoryItem>();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="HomeViewModel"/> class.
         /// </summary>
@@ -105,13 +112,14 @@ namespace Magnetify.ViewModels
         {
             if (ForceDisable)
             {
+                Debug.WriteLine("FORCE DISABLE: Stopping sound and vibration");
                 Stop();
                 IconSource = "icon_inactive.png";
             }
             else
             {
                 IconSource = "icon_active.png";
-                CheckAndAct();
+                _soundService.InitializeAsync().Wait();
             }
         }
 
@@ -146,9 +154,27 @@ namespace Magnetify.ViewModels
         /// <param name="e">The event arguments</param>
         private void OnMagnetometerServicePropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(IMagnetometerService.CurrentAverage))
+            if (e.PropertyName == nameof(IMagnetometerService.CurrentValue))
             {
+                _historyDebounceCount++;
                 CurrentValue = _magnetometerService.NormalizedValue;
+
+                if (_historyDebounceCount >= 20)
+                {
+                    ShortHistory.Insert(0, new HistoryItem { Text = $"{_magnetometerService.CurrentAverage:F2} µT", Opacity = 1d });
+                    if (ShortHistory.Count > 5)
+                    {
+                        ShortHistory.RemoveAt(ShortHistory.Count - 1);
+                    }
+
+                    for(var i = 0; i < ShortHistory.Count; i++)
+                    {
+                        ShortHistory[i].Opacity = 0.9 - (0.75 / 4) * i;
+                    }
+
+                    _historyDebounceCount = 0;
+                }
+
                 CheckAndAct();
             }
         }
@@ -195,6 +221,7 @@ namespace Magnetify.ViewModels
 
             while (IsPlaying && App.IsHome && !cancellation.IsCancellationRequested)
             {
+                if (ForceDisable) break;
                 var duration = Math.Max(50, 600 - (int)(Math.Pow(_magnetometerService.NormalizedValue, 2) * 450));
                 // SPAM
                 //Debug.WriteLine($"Normalized: {_magnetometerService.NormalizedValue}\nAverage: {_magnetometerService.CurrentAverage}\nPlaying beep for {duration} ms");

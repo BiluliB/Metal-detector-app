@@ -57,11 +57,11 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appiconfg.svg" />
-	  <None Remove="Resources\Images\icon_about.png" />
+	  <None Remove="Resources\Images\icon_about.svg" />
 	  <None Remove="Resources\Images\icon_active.png" />
-	  <None Remove="Resources\Images\icon_home.png" />
+	  <None Remove="Resources\Images\icon_history.png" />
+	  <None Remove="Resources\Images\icon_home.svg" />
 	  <None Remove="Resources\Images\icon_inactive.png" />
-	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\raw\beep.mp3" />
 	</ItemGroup>
 
@@ -90,6 +90,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RecentPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
