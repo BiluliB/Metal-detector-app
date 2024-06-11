@@ -1,6 +1,8 @@
 ﻿using Magnetify.Common;
+using Magnetify.Data;
 using Magnetify.Interfaces;
 using PropertyChanged;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 
 namespace Magnetify.Services
@@ -71,6 +73,16 @@ namespace Magnetify.Services
         /// The current min of the magnetometer values
         /// </summary>
         public double CurrentMin { get; private set; } = 0.0;
+
+        /// <summary>
+        /// Recent items for the magnetometer Formatted and in detail
+        /// </summary>
+        public ObservableCollection<RecentItem> RecentItems { get; private set; } = new ObservableCollection<RecentItem>();
+
+        /// <summary>
+        /// Debounce count for the recent items
+        /// </summary>
+        private int _debounceCount = 0;
 
         public MagnetometerService(IAlertService alertService)
         {
@@ -171,6 +183,26 @@ namespace Magnetify.Services
             CurrentMin = Values.Min();
 
             OnPropertyChanged(nameof(CurrentValue));
+
+            _debounceCount++;
+            if (_debounceCount < 20)
+            {
+                return;
+            }
+
+            RecentItems.Insert(0, new RecentItem
+            {
+                Name = $"{CurrentValue:F2} µT",
+                Description = $"{CurrentValue:F9}"
+            });
+
+            // Cleanup the list
+            // TODO: improve by disabling the animations for this
+            if (RecentItems.Count > 20)
+            {
+                RecentItems.RemoveAt(RecentItems.Count - 1);
+            }
+            _debounceCount = 0;
             // SPAM
             //Debug.WriteLine($"Magnetometer value: {value}");
         }

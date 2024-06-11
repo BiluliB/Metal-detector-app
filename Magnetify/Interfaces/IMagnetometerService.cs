@@ -1,5 +1,7 @@
 ﻿
 using Magnetify.Common;
+using Magnetify.Data;
+using System.Collections.ObjectModel;
 
 namespace Magnetify.Interfaces
 {
@@ -14,7 +16,7 @@ namespace Magnetify.Interfaces
         double MinMagnetometerValue { get; set; }
         double NormalizedValue { get; }
         Queue<double> Values { get; }
-
+        ObservableCollection<RecentItem> RecentItems { get; }
         public void Start();
         public void Stop();
 

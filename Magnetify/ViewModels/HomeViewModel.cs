@@ -3,7 +3,6 @@ using Magnetify.Data;
 using Magnetify.Interfaces;
 using Magnetify.Services;
 using PropertyChanged;
-using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -83,8 +82,15 @@ namespace Magnetify.ViewModels
         /// </summary>
         public Command ToggleForceDisable => new Command(() => ForceDisable = !ForceDisable);
 
+        /// <summary>
+        /// History debounce count, to debounce the history update
+        /// </summary>
         public int _historyDebounceCount = 0;
 
+        /// <summary>
+        /// History of the magnetometer values, containing the last 5 values
+        /// Opacity is set to 1 for the most recent value, and decreases for older values
+        /// </summary>
         public ObservableCollection<HistoryItem> ShortHistory { get; set; } = new ObservableCollection<HistoryItem>();
 
         /// <summary>
@@ -120,6 +126,7 @@ namespace Magnetify.ViewModels
             {
                 IconSource = "icon_active.png";
                 _soundService.InitializeAsync().Wait();
+                CheckAndAct();
             }
         }
 
@@ -133,16 +140,7 @@ namespace Magnetify.ViewModels
         {
             if (e.PropertyName == nameof(ISoundService.DisableSound))
             {
-                if (_soundService.DisableSound && IsPlaying)
-                {
-                    Stop();
-                }
-                else if (!_soundService.DisableSound)
-                {
-                    _cts?.Cancel();
-                    Debug.WriteLine("Sound enabled, checking and acting");
-                    CheckAndAct();
-                }
+                ForceDisable = _soundService.DisableSound;
             }
         }
 
@@ -175,7 +173,10 @@ namespace Magnetify.ViewModels
                     _historyDebounceCount = 0;
                 }
 
-                CheckAndAct();
+                if (!ForceDisable)
+                {
+                    CheckAndAct();
+                }
             }
         }
 
@@ -184,12 +185,13 @@ namespace Magnetify.ViewModels
         /// Plays a sound and vibrates if the value is above the detection threshold.
         /// </summary>
         public async void CheckAndAct()
-        {
-            _cts = new CancellationTokenSource();
-            if (_magnetometerService.CurrentAverage > _magnetometerService.DetectionThreshold && !IsPlaying)
+        { 
+            if (_magnetometerService.CurrentAverage > _magnetometerService.DetectionThreshold && App.IsHome && !IsPlaying)
             {
-                IsPlaying = true;
+                _cts?.Cancel();
+                _cts = new CancellationTokenSource();
                 Debug.WriteLine("Playing sound and vibrating");
+                IsPlaying = true;
                 await PlayAndVibrateAsync(_cts.Token);
             }
             else if (_magnetometerService.CurrentAverage <= _magnetometerService.DetectionThreshold && IsPlaying)
@@ -217,11 +219,13 @@ namespace Magnetify.ViewModels
         /// <returns></returns>
         private async Task PlayAndVibrateAsync(CancellationToken cancellation)
         {
-            if (ForceDisable) return;
-
             while (IsPlaying && App.IsHome && !cancellation.IsCancellationRequested)
             {
-                if (ForceDisable) break;
+                if (ForceDisable)
+                {
+                    Stop();
+                    break;
+                }
                 var duration = Math.Max(50, 600 - (int)(Math.Pow(_magnetometerService.NormalizedValue, 2) * 450));
                 // SPAM
                 //Debug.WriteLine($"Normalized: {_magnetometerService.NormalizedValue}\nAverage: {_magnetometerService.CurrentAverage}\nPlaying beep for {duration} ms");

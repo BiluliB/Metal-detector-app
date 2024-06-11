@@ -32,7 +32,7 @@ public partial class HomePage : ContentPage
     {
         base.OnDisappearing();
         Debug.WriteLine("Home page disappearing, running Stop");
-        App.IsHome = false;
         _viewModel.Stop();
+        App.IsHome = false;
     }
 }
