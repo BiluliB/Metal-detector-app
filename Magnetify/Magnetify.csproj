@@ -57,9 +57,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\icons8-info-50.png" />
+	  <None Remove="Resources\Images\icons8-log-50.png" />
 	  <None Remove="Resources\Images\icon_about.png" />
 	  <None Remove="Resources\Images\icon_home.png" />
+	  <None Remove="Resources\Images\info_circle.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\new_home.png" />
+	  <None Remove="Resources\Images\page.png" />
 	  <None Remove="Resources\raw\beep.mp3" />
 	</ItemGroup>
 

@@ -16,7 +16,7 @@
 
         <!-- Tab for the LogPage -->
         <!-- TODO: Add specific Log Icon -->
-        <Tab Title="About" Icon="icon_about.png" >
+        <Tab Title="Log" Icon="icon_log.png" >
             <ShellContent ContentTemplate="{DataTemplate views:LogPage}" />
         </Tab>
 
