@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical" MembersFormat="NameAndType">
+  <Class Name="Magnetify.Common.BaseNotifyHandler">
+    <Position X="1" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\BaseNotifyHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magnetify.Common.BetterCollection&lt;T&gt;" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAA=</HashCode>
+      <FileName>Common\BetterCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magnetify.Common.BetterCollectionFadeOut" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAoAAAAAAAAAAAAIAAAAAAAAAAAARAAAAIAAAAAAAA=</HashCode>
+      <FileName>Common\BetterCollectionFadeOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magnetify.Data.OpacityItem" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Data\OpacityItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magnetify.Data.RecentItem" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\RecentItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magnetify.Services.AlertService">
+    <Position X="9" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AlertService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magnetify.Services.MagnetometerService">
+    <Position X="1" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAASAAAAAkAQKAgACAAAIAAAAIYAAhgAAAAAA=</HashCode>
+      <FileName>Services\MagnetometerService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magnetify.Services.SoundService">
+    <Position X="4.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAACAAAAAAAAAIAAAAgAACEAAA=</HashCode>
+      <FileName>Services\SoundService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magnetify.Services.VibrationService">
+    <Position X="6.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAgACAAAAA=</HashCode>
+      <FileName>Services\VibrationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magnetify.ViewModels.AboutViewModel" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAACA=</HashCode>
+      <FileName>ViewModels\AboutViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magnetify.ViewModels.HomeViewModel" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAACAAhMAAAAAAAABgAAUMAAAYEAQAAIQSAQAAAAAA=</HashCode>
+      <FileName>ViewModels\HomeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magnetify.ViewModels.RecentViewModel" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\RecentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

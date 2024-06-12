@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="1a64cd83-6bf6-4a94-b3af-9f375d73c328" name="fokko@F-SCHOOL 2024-06-12 17:33:46" runUser="F-SCHOOL\fokko" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-06-12T17:33:46.9853817+02:00" queuing="2024-06-12T17:33:46.9853824+02:00" start="2024-06-12T17:33:45.5058448+02:00" finish="2024-06-12T17:33:47.1155150+02:00" />
+  <TestSettings name="default" id="8fb68a2e-3f70-4f3c-9244-89b9ff874a00">
+    <Deployment runDeploymentRoot="fokko_F-SCHOOL_2024-06-12_17_33_46" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="baa14103-063b-4be4-a822-81b9692b3cdf" testId="8d15a510-163f-b7d2-70e8-9891ac278e49" testName="Magnetify.Tests.Common.BetterCollectionFadeOutTests.InitializationTest" computerName="F-SCHOOL" duration="00:00:00.0003036" startTime="2024-06-12T17:33:46.9079386+02:00" endTime="2024-06-12T17:33:46.9079387+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="baa14103-063b-4be4-a822-81b9692b3cdf" />
+    <UnitTestResult executionId="eca9ab1b-43a2-47cd-87b9-81eb8b6f41b3" testId="99dec6d2-76e7-8672-abae-7adc31fed367" testName="Magnetify.Tests.ViewModels.AboutViewModelTests.OpenUrl_InvalidUrl_DoesNotOpenUrl" computerName="F-SCHOOL" duration="00:00:00.0366971" startTime="2024-06-12T17:33:46.9080356+02:00" endTime="2024-06-12T17:33:46.9080359+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eca9ab1b-43a2-47cd-87b9-81eb8b6f41b3" />
+    <UnitTestResult executionId="923657ff-cbe1-44a2-91c1-962be2c18664" testId="bce4ed91-fe46-19a8-27a9-b190c00f8faa" testName="Magnetify.Tests.Services.SoundServiceTests.Enable_SetsDisableSoundToFalse" computerName="F-SCHOOL" duration="00:00:00.0004508" startTime="2024-06-12T17:33:46.9009704+02:00" endTime="2024-06-12T17:33:46.9009707+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="923657ff-cbe1-44a2-91c1-962be2c18664" />
+    <UnitTestResult executionId="a072a962-6d0a-4548-b631-3f9df30c952c" testId="92e008db-52ff-8e11-dba4-e38d169c22dc" testName="Magnetify.Tests.Common.BetterCollectionFadeOutTests.TrimExcessItems_RemovesExcessItems" computerName="F-SCHOOL" duration="00:00:00.0083342" startTime="2024-06-12T17:33:46.9078418+02:00" endTime="2024-06-12T17:33:46.9078420+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a072a962-6d0a-4548-b631-3f9df30c952c" />
+    <UnitTestResult executionId="cd42e24a-4736-4f7e-841c-1e4f101c94c2" testId="c62d6414-3cf1-c079-13d2-3ebefeaf9e08" testName="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_AddsItemAtStart" computerName="F-SCHOOL" duration="00:00:00.0071336" startTime="2024-06-12T17:33:46.9022818+02:00" endTime="2024-06-12T17:33:46.9022819+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd42e24a-4736-4f7e-841c-1e4f101c94c2" />
+    <UnitTestResult executionId="01833879-d189-4140-92c1-1d9bd012b30b" testId="82266628-d871-d854-c44c-74df77885e90" testName="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_UpdatesOpacity" computerName="F-SCHOOL" duration="00:00:00.0016608" startTime="2024-06-12T17:33:46.9024361+02:00" endTime="2024-06-12T17:33:46.9024362+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01833879-d189-4140-92c1-1d9bd012b30b" />
+    <UnitTestResult executionId="918affeb-f519-4dce-ba6f-f9c09f94f4a3" testId="d0749737-9c99-ed28-b0c7-c368cbfc4648" testName="Magnetify.Tests.Services.SoundServiceTests.Disable_SetsDisableSoundToTrue" computerName="F-SCHOOL" duration="00:00:00.0183460" startTime="2024-06-12T17:33:46.8083697+02:00" endTime="2024-06-12T17:33:46.8083698+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="918affeb-f519-4dce-ba6f-f9c09f94f4a3" />
+    <UnitTestResult executionId="3ea2b851-9c83-452e-bb27-b5df346fa025" testId="d6c5bfbf-54ec-44ef-ba0e-d3e442309bd1" testName="Magnetify.Tests.Services.MagnetometerServiceTests.AddValue_ShouldUpdateValuesCorrectly" computerName="F-SCHOOL" duration="00:00:00.1718145" startTime="2024-06-12T17:33:46.9492767+02:00" endTime="2024-06-12T17:33:46.9492774+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ea2b851-9c83-452e-bb27-b5df346fa025" />
+    <UnitTestResult executionId="b55a9324-079a-46a1-978e-d55e5753a702" testId="6951b396-eb1a-4318-da4b-dfa34e19d77c" testName="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_DoesNotExceedMaxLength" computerName="F-SCHOOL" duration="00:00:00.0004905" startTime="2024-06-12T17:33:46.9076050+02:00" endTime="2024-06-12T17:33:46.9076053+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b55a9324-079a-46a1-978e-d55e5753a702" />
+    <UnitTestResult executionId="fc2458bc-d9c5-484c-81cd-b11bd61f9adb" testId="6c5bb694-7dbe-2a8e-d1f4-32114617a6e8" testName="Magnetify.Tests.Services.VibrationServiceTests.VibrationService_Initialization_DisableVibrationIsFalse" computerName="F-SCHOOL" duration="00:00:00.0002602" startTime="2024-06-12T17:33:46.9015880+02:00" endTime="2024-06-12T17:33:46.9015881+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fc2458bc-d9c5-484c-81cd-b11bd61f9adb" />
+    <UnitTestResult executionId="2985a9df-b5eb-4d0f-84a2-fcd4497930b5" testId="ddf0c57e-0159-4967-387f-3d485fa84f2c" testName="Magnetify.Tests.Common.BetterCollectionTests.TrimExcessItems_RemovesItemsBeyondMaxLength" computerName="F-SCHOOL" duration="00:00:00.0002727" startTime="2024-06-12T17:33:46.9018302+02:00" endTime="2024-06-12T17:33:46.9018305+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2985a9df-b5eb-4d0f-84a2-fcd4497930b5" />
+    <UnitTestResult executionId="f4011e65-369b-4907-828b-aea7d4aa65f8" testId="091fc046-db55-59a6-4bc1-19d893b4cef8" testName="Magnetify.Tests.Services.MagnetometerServiceTests.Stop_ShouldSetRunningToFalse" computerName="F-SCHOOL" duration="00:00:00.0049017" startTime="2024-06-12T17:33:46.9543889+02:00" endTime="2024-06-12T17:33:46.9543895+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4011e65-369b-4907-828b-aea7d4aa65f8" />
+    <UnitTestResult executionId="b2845033-957b-48a6-af08-69d3ba5a6ba9" testId="2c31a1fa-f67c-0d71-e67d-501795c1ef65" testName="Magnetify.Tests.ViewModels.AboutViewModelTests.Constructor_InitializesOpenUrlCommand" computerName="F-SCHOOL" duration="00:00:00.0328849" startTime="2024-06-12T17:33:46.9077364+02:00" endTime="2024-06-12T17:33:46.9077365+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b2845033-957b-48a6-af08-69d3ba5a6ba9" />
+    <UnitTestResult executionId="81853a8c-5465-43f7-b36f-2ed06e813226" testId="a3cbaeef-80a1-8ade-80e0-7ae44bfa850f" testName="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_AddsItemToStartOfCollection" computerName="F-SCHOOL" duration="00:00:00.0165907" startTime="2024-06-12T17:33:46.8030091+02:00" endTime="2024-06-12T17:33:46.8030526+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81853a8c-5465-43f7-b36f-2ed06e813226" />
+    <UnitTestResult executionId="9f1a8135-984f-476f-9c8b-79427878ae77" testId="8ef04d12-faa3-6535-9b3a-5bc775ccd87b" testName="Magnetify.Tests.Services.VibrationServiceTests.Enable_SetsDisableVibrationToFalse" computerName="F-SCHOOL" duration="00:00:00.0132438" startTime="2024-06-12T17:33:46.8083956+02:00" endTime="2024-06-12T17:33:46.8083957+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f1a8135-984f-476f-9c8b-79427878ae77" />
+    <UnitTestResult executionId="5c4d04f0-e0b1-440f-b917-6076855b26c5" testId="291f1cc1-1a84-1f37-1bde-240c1fc3aa09" testName="Magnetify.Tests.Services.VibrationServiceTests.Disable_SetsDisableVibrationToTrue" computerName="F-SCHOOL" duration="00:00:00.0004792" startTime="2024-06-12T17:33:46.9014771+02:00" endTime="2024-06-12T17:33:46.9014775+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c4d04f0-e0b1-440f-b917-6076855b26c5" />
+    <UnitTestResult executionId="29b8a557-abe1-4fa7-baca-8f56aa2765f7" testId="6700ce79-b13f-1959-d1f6-a5bd52b47fce" testName="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_NotifiesCollectionChanged" computerName="F-SCHOOL" duration="00:00:00.0005894" startTime="2024-06-12T17:33:46.9019560+02:00" endTime="2024-06-12T17:33:46.9019562+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29b8a557-abe1-4fa7-baca-8f56aa2765f7" />
+    <UnitTestResult executionId="222df000-a762-464a-9595-a994e2a451de" testId="73896457-ec40-5704-4866-3a7319bffc0e" testName="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_ExceedsMaxLength_RemovesLastItem" computerName="F-SCHOOL" duration="00:00:00.0009798" startTime="2024-06-12T17:33:46.9016561+02:00" endTime="2024-06-12T17:33:46.9016563+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="222df000-a762-464a-9595-a994e2a451de" />
+    <UnitTestResult executionId="a8eddaca-67b0-4b81-bc78-6d828d8695e9" testId="cf03306f-4658-d9cb-d7e3-5065f3661689" testName="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_NotifiesCollectionChangedOnce" computerName="F-SCHOOL" duration="00:00:00.0003618" startTime="2024-06-12T17:33:46.9020530+02:00" endTime="2024-06-12T17:33:46.9020531+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8eddaca-67b0-4b81-bc78-6d828d8695e9" />
+    <UnitTestResult executionId="ec4ab8a1-d83d-41da-b968-d9240681c891" testId="c0b7c290-700b-1613-834b-786fa94d3c63" testName="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_FiresCollectionChangedOnce" computerName="F-SCHOOL" duration="00:00:00.0165006" startTime="2024-06-12T17:33:46.8077556+02:00" endTime="2024-06-12T17:33:46.8077558+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec4ab8a1-d83d-41da-b968-d9240681c891" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_FiresCollectionChangedOnce" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="c0b7c290-700b-1613-834b-786fa94d3c63">
+      <Execution id="ec4ab8a1-d83d-41da-b968-d9240681c891" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionFadeOutTests" name="AddAtStart_FiresCollectionChangedOnce" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.VibrationServiceTests.Enable_SetsDisableVibrationToFalse" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="8ef04d12-faa3-6535-9b3a-5bc775ccd87b">
+      <Execution id="9f1a8135-984f-476f-9c8b-79427878ae77" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.VibrationServiceTests" name="Enable_SetsDisableVibrationToFalse" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.ViewModels.AboutViewModelTests.Constructor_InitializesOpenUrlCommand" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="2c31a1fa-f67c-0d71-e67d-501795c1ef65">
+      <Execution id="b2845033-957b-48a6-af08-69d3ba5a6ba9" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.ViewModels.AboutViewModelTests" name="Constructor_InitializesOpenUrlCommand" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_UpdatesOpacity" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="82266628-d871-d854-c44c-74df77885e90">
+      <Execution id="01833879-d189-4140-92c1-1d9bd012b30b" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionFadeOutTests" name="AddAtStart_UpdatesOpacity" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.VibrationServiceTests.VibrationService_Initialization_DisableVibrationIsFalse" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="6c5bb694-7dbe-2a8e-d1f4-32114617a6e8">
+      <Execution id="fc2458bc-d9c5-484c-81cd-b11bd61f9adb" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.VibrationServiceTests" name="VibrationService_Initialization_DisableVibrationIsFalse" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_AddsItemAtStart" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="c62d6414-3cf1-c079-13d2-3ebefeaf9e08">
+      <Execution id="cd42e24a-4736-4f7e-841c-1e4f101c94c2" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionFadeOutTests" name="AddAtStart_AddsItemAtStart" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionFadeOutTests.TrimExcessItems_RemovesExcessItems" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="92e008db-52ff-8e11-dba4-e38d169c22dc">
+      <Execution id="a072a962-6d0a-4548-b631-3f9df30c952c" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionFadeOutTests" name="TrimExcessItems_RemovesExcessItems" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.MagnetometerServiceTests.Stop_ShouldSetRunningToFalse" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="091fc046-db55-59a6-4bc1-19d893b4cef8">
+      <Execution id="f4011e65-369b-4907-828b-aea7d4aa65f8" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.MagnetometerServiceTests" name="Stop_ShouldSetRunningToFalse" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.SoundServiceTests.Enable_SetsDisableSoundToFalse" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="bce4ed91-fe46-19a8-27a9-b190c00f8faa">
+      <Execution id="923657ff-cbe1-44a2-91c1-962be2c18664" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.SoundServiceTests" name="Enable_SetsDisableSoundToFalse" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.MagnetometerServiceTests.AddValue_ShouldUpdateValuesCorrectly" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="d6c5bfbf-54ec-44ef-ba0e-d3e442309bd1">
+      <Execution id="3ea2b851-9c83-452e-bb27-b5df346fa025" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.MagnetometerServiceTests" name="AddValue_ShouldUpdateValuesCorrectly" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_NotifiesCollectionChanged" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="6700ce79-b13f-1959-d1f6-a5bd52b47fce">
+      <Execution id="29b8a557-abe1-4fa7-baca-8f56aa2765f7" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionTests" name="AddAtStart_NotifiesCollectionChanged" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.VibrationServiceTests.Disable_SetsDisableVibrationToTrue" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="291f1cc1-1a84-1f37-1bde-240c1fc3aa09">
+      <Execution id="5c4d04f0-e0b1-440f-b917-6076855b26c5" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.VibrationServiceTests" name="Disable_SetsDisableVibrationToTrue" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionFadeOutTests.AddAtStart_DoesNotExceedMaxLength" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="6951b396-eb1a-4318-da4b-dfa34e19d77c">
+      <Execution id="b55a9324-079a-46a1-978e-d55e5753a702" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionFadeOutTests" name="AddAtStart_DoesNotExceedMaxLength" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.ViewModels.AboutViewModelTests.OpenUrl_InvalidUrl_DoesNotOpenUrl" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="99dec6d2-76e7-8672-abae-7adc31fed367">
+      <Execution id="eca9ab1b-43a2-47cd-87b9-81eb8b6f41b3" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.ViewModels.AboutViewModelTests" name="OpenUrl_InvalidUrl_DoesNotOpenUrl" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_NotifiesCollectionChangedOnce" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="cf03306f-4658-d9cb-d7e3-5065f3661689">
+      <Execution id="a8eddaca-67b0-4b81-bc78-6d828d8695e9" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionTests" name="AddAtStart_NotifiesCollectionChangedOnce" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionTests.TrimExcessItems_RemovesItemsBeyondMaxLength" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="ddf0c57e-0159-4967-387f-3d485fa84f2c">
+      <Execution id="2985a9df-b5eb-4d0f-84a2-fcd4497930b5" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionTests" name="TrimExcessItems_RemovesItemsBeyondMaxLength" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionFadeOutTests.InitializationTest" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="8d15a510-163f-b7d2-70e8-9891ac278e49">
+      <Execution id="baa14103-063b-4be4-a822-81b9692b3cdf" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionFadeOutTests" name="InitializationTest" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_ExceedsMaxLength_RemovesLastItem" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="73896457-ec40-5704-4866-3a7319bffc0e">
+      <Execution id="222df000-a762-464a-9595-a994e2a451de" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionTests" name="AddAtStart_ExceedsMaxLength_RemovesLastItem" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Services.SoundServiceTests.Disable_SetsDisableSoundToTrue" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="d0749737-9c99-ed28-b0c7-c368cbfc4648">
+      <Execution id="918affeb-f519-4dce-ba6f-f9c09f94f4a3" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Services.SoundServiceTests" name="Disable_SetsDisableSoundToTrue" />
+    </UnitTest>
+    <UnitTest name="Magnetify.Tests.Common.BetterCollectionTests.AddAtStart_AddsItemToStartOfCollection" storage="c:\github\ict-335-praxisarbeit\magnetify.tests\bin\debug\net8.0\magnetify.tests.dll" id="a3cbaeef-80a1-8ade-80e0-7ae44bfa850f">
+      <Execution id="81853a8c-5465-43f7-b36f-2ed06e813226" />
+      <TestMethod codeBase="C:\Github\ict-335-praxisarbeit\Magnetify.Tests\bin\Debug\net8.0\Magnetify.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Magnetify.Tests.Common.BetterCollectionTests" name="AddAtStart_AddsItemToStartOfCollection" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="8d15a510-163f-b7d2-70e8-9891ac278e49" executionId="baa14103-063b-4be4-a822-81b9692b3cdf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99dec6d2-76e7-8672-abae-7adc31fed367" executionId="eca9ab1b-43a2-47cd-87b9-81eb8b6f41b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bce4ed91-fe46-19a8-27a9-b190c00f8faa" executionId="923657ff-cbe1-44a2-91c1-962be2c18664" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="92e008db-52ff-8e11-dba4-e38d169c22dc" executionId="a072a962-6d0a-4548-b631-3f9df30c952c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c62d6414-3cf1-c079-13d2-3ebefeaf9e08" executionId="cd42e24a-4736-4f7e-841c-1e4f101c94c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82266628-d871-d854-c44c-74df77885e90" executionId="01833879-d189-4140-92c1-1d9bd012b30b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0749737-9c99-ed28-b0c7-c368cbfc4648" executionId="918affeb-f519-4dce-ba6f-f9c09f94f4a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6c5bfbf-54ec-44ef-ba0e-d3e442309bd1" executionId="3ea2b851-9c83-452e-bb27-b5df346fa025" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6951b396-eb1a-4318-da4b-dfa34e19d77c" executionId="b55a9324-079a-46a1-978e-d55e5753a702" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c5bb694-7dbe-2a8e-d1f4-32114617a6e8" executionId="fc2458bc-d9c5-484c-81cd-b11bd61f9adb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddf0c57e-0159-4967-387f-3d485fa84f2c" executionId="2985a9df-b5eb-4d0f-84a2-fcd4497930b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="091fc046-db55-59a6-4bc1-19d893b4cef8" executionId="f4011e65-369b-4907-828b-aea7d4aa65f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c31a1fa-f67c-0d71-e67d-501795c1ef65" executionId="b2845033-957b-48a6-af08-69d3ba5a6ba9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3cbaeef-80a1-8ade-80e0-7ae44bfa850f" executionId="81853a8c-5465-43f7-b36f-2ed06e813226" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ef04d12-faa3-6535-9b3a-5bc775ccd87b" executionId="9f1a8135-984f-476f-9c8b-79427878ae77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="291f1cc1-1a84-1f37-1bde-240c1fc3aa09" executionId="5c4d04f0-e0b1-440f-b917-6076855b26c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6700ce79-b13f-1959-d1f6-a5bd52b47fce" executionId="29b8a557-abe1-4fa7-baca-8f56aa2765f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73896457-ec40-5704-4866-3a7319bffc0e" executionId="222df000-a762-464a-9595-a994e2a451de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cf03306f-4658-d9cb-d7e3-5065f3661689" executionId="a8eddaca-67b0-4b81-bc78-6d828d8695e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0b7c290-700b-1613-834b-786fa94d3c63" executionId="ec4ab8a1-d83d-41da-b968-d9240681c891" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Ergebnisse nicht in einer Liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="20" executed="20" passed="20" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.5)&#xD;
+[xUnit.net 00:00:00.20]   Discovering: Magnetify.Tests&#xD;
+[xUnit.net 00:00:00.31]   Discovered:  Magnetify.Tests&#xD;
+[xUnit.net 00:00:00.32]   Starting:    Magnetify.Tests&#xD;
+[xUnit.net 00:00:00.61]   Finished:    Magnetify.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
