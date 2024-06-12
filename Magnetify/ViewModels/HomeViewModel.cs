@@ -71,6 +71,11 @@ namespace Magnetify.ViewModels
         public string IconSource { get; set; } = "icon_active.png";
 
         /// <summary>
+        /// The text for bellow the icon
+        /// </summary>
+        public string IconText { get; set; } = "Press to mute!";
+
+        /// <summary>
         /// Force disable flag, to disable the magnetometer service
         /// </summary>
         [OnChangedMethod(nameof(OnForceDisableChange))]
@@ -120,10 +125,12 @@ namespace Magnetify.ViewModels
                 Debug.WriteLine("FORCE DISABLE: Stopping sound and vibration");
                 Stop();
                 IconSource = "icon_inactive.png";
+                IconText = "Press to unmute!";
             }
             else
             {
                 IconSource = "icon_active.png";
+                IconText = "Press to mute!";
                 _soundService.InitializeAsync().Wait();
                 CheckAndAct();
             }
