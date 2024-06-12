@@ -5,6 +5,9 @@ using Magnetify.Services;
 using PropertyChanged;
 using System.ComponentModel;
 using System.Diagnostics;
+#if IOS
+using UIKit;
+#endif
 
 namespace Magnetify.ViewModels
 {
