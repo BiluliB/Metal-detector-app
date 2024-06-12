@@ -52,6 +52,10 @@ namespace Magnetify
                 {
                     android.OnCreate((activity, bundle) => {
                         Debug.WriteLine("Lifecycle: OnCreate ------");
+                        // lock portrait orientation
+                        activity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
+
+                        // Initialize services
                         var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
                         var soundService = App.ServiceProvider.GetService<ISoundService>();
                         var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
@@ -61,6 +65,8 @@ namespace Magnetify
 
                     android.OnResume(activity => {
                         Debug.WriteLine("Lifecycle: OnResume ------");
+
+                        // Resume services
                         var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
                         var soundService = App.ServiceProvider.GetService<ISoundService>();
                         var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
@@ -71,6 +77,8 @@ namespace Magnetify
 
                     android.OnStop(activity => {
                         Debug.WriteLine("Lifecycle: OnStop ------");
+
+                        // Stop services
                         var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
                         var soundService = App.ServiceProvider.GetService<ISoundService>();
                         var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
@@ -87,6 +95,8 @@ namespace Magnetify
                 {
                     ios.FinishedLaunching((app, options) => {
                         Debug.WriteLine("Lifecycle: FinishedLaunching ------");
+
+                        // Initialize services
                         var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
                         var soundService = App.ServiceProvider.GetService<ISoundService>();
                         var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
@@ -97,6 +107,8 @@ namespace Magnetify
 
                     ios.WillEnterForeground(app => {
                         Debug.WriteLine("Lifecycle: WillEnterForeground ------");
+
+                        // Resume services
                         var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
                         var soundService = App.ServiceProvider.GetService<ISoundService>();
                         var vibrationService = App.ServiceProvider.GetService<IVibrationService>();
@@ -107,6 +119,8 @@ namespace Magnetify
 
                     ios.DidEnterBackground(app => {
                         Debug.WriteLine("Lifecycle: DidEnterBackground ------");
+
+                        // Stop services
                         var magnetometerService = App.ServiceProvider.GetService<IMagnetometerService>();
                         var soundService = App.ServiceProvider.GetService<ISoundService>();
                         var vibrationService = App.ServiceProvider.GetService<IVibrationService>();

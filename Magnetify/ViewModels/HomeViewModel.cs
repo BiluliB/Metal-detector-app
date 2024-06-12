@@ -3,7 +3,6 @@ using Magnetify.Data;
 using Magnetify.Interfaces;
 using Magnetify.Services;
 using PropertyChanged;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 
@@ -49,7 +48,7 @@ namespace Magnetify.ViewModels
         /// Updated when the CurrentValue changes, formatted to 2 decimal places
         /// </summary>
         [DependsOn(nameof(CurrentValue))]
-        public string Label => $"{_magnetometerService.CurrentAverage:F2} µT";
+        public string Label => $"{_magnetometerService.CurrentValue:F2} µT";
 
         /// <summary>
         /// Current width of the bar, based on the CurrentValue
@@ -236,6 +235,26 @@ namespace Magnetify.ViewModels
         Color GetColorFromGradient(double value)
         {
             return new Color((float)value, (float)(1 - value), 0);
+        }
+
+        public void DisableSleep()
+        {
+#if ANDROID
+            DeviceDisplay.KeepScreenOn = true;
+#elif IOS
+            UIApplication.SharedApplication.IdleTimerDisabled = true;
+#endif
+            Debug.WriteLine("Sleep disabled");
+        }
+
+        public void EnableSleep()
+        {
+#if ANDROID
+            DeviceDisplay.KeepScreenOn = false;
+#elif IOS
+            UIApplication.SharedApplication.IdleTimerDisabled = false;
+#endif
+            Debug.WriteLine("Sleep reenabled");
         }
     }
 }
