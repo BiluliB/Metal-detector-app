@@ -28,7 +28,7 @@ namespace Magnetify.ViewModels
         /// </summary>
         /// <param name="url">The URL to open.</param>
         /// <returns></returns>
-        private async Task OpenUrl(string url)
+        public async Task OpenUrl(string url)
         {
             if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
             {

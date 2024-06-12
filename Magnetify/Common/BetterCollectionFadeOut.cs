@@ -1,6 +1,7 @@
 ﻿using Magnetify.Data;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 
 namespace Magnetify.Common
 {
@@ -11,7 +12,15 @@ namespace Magnetify.Common
     /// </summary>
     public class BetterCollectionFadeOut : ObservableCollection<OpacityItem>
     {
+        /// <summary>
+        /// The maximum length of the collection.
+        /// </summary>
         private readonly int _maxLength;
+
+        /// <summary>
+        /// Suppresses notifications
+        /// </summary>
+        private bool _suppressNotifications = false;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BetterCollectionFadeOut"/> class.
@@ -32,6 +41,8 @@ namespace Magnetify.Common
         public void AddAtStart(OpacityItem item)
         {
             CheckReentrancy();
+            
+            _suppressNotifications = true;
 
             // Insert the new item at the start
             InsertItem(0, item);
@@ -44,9 +55,9 @@ namespace Magnetify.Common
                 this[i].Opacity = 0.9 - (0.75 / Count) * i;
             }
 
+            _suppressNotifications = false;
+
             // Notify about the changes after all modifications
-            //OnPropertyChanged(new PropertyChangedEventArgs("Count"));
-            //OnPropertyChanged(new PropertyChangedEventArgs("Item[]"));
             OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
         
             
@@ -60,6 +71,30 @@ namespace Magnetify.Common
             while (Count > _maxLength)
             {
                 RemoveItem(Count - 1); // Remove the last item
+            }
+        }
+
+        /// <summary>
+        /// Prevent events from being raised during the collection modification.
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+        {
+            if (!_suppressNotifications)
+            {
+                base.OnCollectionChanged(e);
+            }
+        }
+
+        /// <summary>
+        /// Prevent events from being raised during the collection modification.
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            if (!_suppressNotifications)
+            {
+                base.OnPropertyChanged(e);
             }
         }
     }

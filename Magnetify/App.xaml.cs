@@ -1,10 +1,13 @@
-﻿namespace Magnetify
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Magnetify
 {
     public partial class App : Application
     {
         /// <summary>
         /// Global service provider.
         /// </summary>
+        [AllowNull, NotNull]
         public static IServiceProvider ServiceProvider { get; private set; }
 
         /// <summary>
