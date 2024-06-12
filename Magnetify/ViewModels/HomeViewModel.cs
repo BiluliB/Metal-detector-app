@@ -91,7 +91,7 @@ namespace Magnetify.ViewModels
         /// History of the magnetometer values, containing the last 5 values
         /// Opacity is set to 1 for the most recent value, and decreases for older values
         /// </summary>
-        public ObservableCollection<HistoryItem> ShortHistory { get; set; } = new ObservableCollection<HistoryItem>();
+        public BetterCollectionFadeOut ShortHistory { get; set; } = new BetterCollectionFadeOut(5);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HomeViewModel"/> class.
@@ -159,17 +159,8 @@ namespace Magnetify.ViewModels
 
                 if (_historyDebounceCount >= 20)
                 {
-                    ShortHistory.Insert(0, new HistoryItem { Text = $"{_magnetometerService.CurrentAverage:F2} µT", Opacity = 1d });
-                    if (ShortHistory.Count > 5)
-                    {
-                        ShortHistory.RemoveAt(ShortHistory.Count - 1);
-                    }
-
-                    for(var i = 0; i < ShortHistory.Count; i++)
-                    {
-                        ShortHistory[i].Opacity = 0.9 - (0.75 / 4) * i;
-                    }
-
+                    ShortHistory.AddAtStart(new OpacityItem { Text = $"{_magnetometerService.CurrentAverage:F2} µT", Opacity = 1d });
+                    
                     _historyDebounceCount = 0;
                 }
 

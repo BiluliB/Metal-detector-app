@@ -77,7 +77,7 @@ namespace Magnetify.Services
         /// <summary>
         /// Recent items for the magnetometer Formatted and in detail
         /// </summary>
-        public ObservableCollection<RecentItem> RecentItems { get; private set; } = new ObservableCollection<RecentItem>();
+        public BetterCollection<RecentItem> RecentItems { get; private set; } = new BetterCollection<RecentItem>(20);
 
         /// <summary>
         /// Debounce count for the recent items
@@ -190,18 +190,11 @@ namespace Magnetify.Services
                 return;
             }
 
-            RecentItems.Insert(0, new RecentItem
+            RecentItems.AddAtStart(new RecentItem
             {
                 Name = $"{CurrentValue:F2} µT",
                 Description = $"{CurrentValue:F9}"
             });
-
-            // Cleanup the list
-            // TODO: improve by disabling the animations for this
-            if (RecentItems.Count > 20)
-            {
-                RecentItems.RemoveAt(RecentItems.Count - 1);
-            }
             _debounceCount = 0;
             // SPAM
             //Debug.WriteLine($"Magnetometer value: {value}");

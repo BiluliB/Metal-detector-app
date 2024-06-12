@@ -16,7 +16,7 @@ namespace Magnetify.Interfaces
         double MinMagnetometerValue { get; set; }
         double NormalizedValue { get; }
         Queue<double> Values { get; }
-        ObservableCollection<RecentItem> RecentItems { get; }
+        BetterCollection<RecentItem> RecentItems { get; }
         public void Start();
         public void Stop();
 

@@ -2,7 +2,7 @@
 
 namespace Magnetify.Data
 {
-    public class HistoryItem
+    public class OpacityItem
     {
         [AllowNull, NotNull]
         public string Text { get; set; }

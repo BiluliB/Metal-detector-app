@@ -15,7 +15,7 @@ namespace Magnetify.ViewModels
         /// <summary>
         /// Relay the recent items from the magnetometer service
         /// </summary>
-        public ObservableCollection<RecentItem> Items => _magnetometerService.RecentItems;
+        public BetterCollection<RecentItem> Items => _magnetometerService.RecentItems;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RecentViewModel"/> class.
